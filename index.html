@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 4 Maths: Your Guide to Years 9 & 10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .solution {
+            display: none;
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link.active {
+            background-color: #4f46e5; /* Tailwind indigo-600 */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-primary {
+            background-color: #6366f1; /* Tailwind indigo-500 */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4f46e5; /* Tailwind indigo-600 */
+        }
+        .btn-primary:disabled {
+            background-color: #a5b4fc; /* Tailwind indigo-300 */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-indigo-600">Phase 4 Maths</h1>
+            <p class="text-gray-600">Your Guide to Years 9 & 10</p>
+        </div>
+        <nav class="bg-gray-100">
+            <div class="container mx-auto px-6 overflow-x-auto">
+                <ul class="flex space-x-2 md:space-x-4 py-2">
+                    <li><a href="#" class="nav-link active px-4 py-2 rounded-lg" onclick="showSection('home', this)">Home</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('number', this)">Number</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('algebra', this)">Algebra</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('measurement', this)">Measurement</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('geometry', this)">Geometry</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('statistics', this)">Statistics</a></li>
+                    <li><a href="#" class="nav-link px-4 py-2 rounded-lg" onclick="showSection('probability', this)">Probability</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <!-- Homepage Section -->
+        <section id="home-content" class="content-section active">
+            <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4">Welcome to Your Maths Hub!</h2>
+                <p class="text-lg mb-4">
+                    Kia ora and welcome! This website is your go-to resource for navigating the world of mathematics and statistics in Years 9 and 10. We're here to help you understand, practice, and apply the concepts you're learning in class.
+                </p>
+                <p class="text-lg">
+                    The focus of Phase 4 is not just about numbers, but about growing as a learner. It's about approaching maths with a <span class="font-semibold">purpose</span>, and being <span class="font-semibold">empathetic and resilient</span> in your problem-solving journey. Let's get started!
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold text-indigo-700 mb-3">The Three Big Ideas</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-indigo-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-2">Patterns and Variation</h4>
+                        <p>How we can use math to find, describe, and understand the amazing patterns that exist all around us, from nature to technology.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-2">Logic and Reasoning</h4>
+                        <p>Using the power of math to think critically, build strong arguments, and solve complex problems step-by-step.</p>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-2">Visualisation and Application</h4>
+                        <p>Seeing mathematical ideas in action and using them as tools to tackle real-world challenges and make sense of the world.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="card">
+                <h3 class="text-xl font-bold text-indigo-700 mb-3">✨ New AI Features!</h3>
+                <p>We've supercharged this website with Gemini AI! Head to the "Let's Do It! Practice" section in any topic to generate unlimited, brand-new practice questions tailored to what you're learning. Never run out of practice again!</p>
+            </div>
+        </section>
+
+        <!-- Number Section -->
+        <section id="number-content" class="content-section">
+            <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Number</h2>
+                <p>Number is all about understanding the relationships between different types of numbers and using them to solve problems involving money, measurement, and more. It's the foundation of almost everything we do in maths!</p>
+            </div>
+
+            <!-- Year 9 Number -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg">Proportional Reasoning</h4>
+                        <p class="mb-2">We learn how fractions, decimals, percentages, and ratios are all connected and use them to solve problems. This is super useful for things like calculating discounts, understanding GST, or figuring out profit and loss.</p>
+                        <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                            <p class="font-semibold">Example: Calculating GST</p>
+                            <p>A new video game costs $95 <span class="font-mono">before</span> GST. In New Zealand, GST is 15%. How much is the GST, and what is the total price?</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong>Convert percentage to decimal:</strong> 15% = 0.15</li>
+                                <li><strong>Calculate GST amount:</strong> $95 * 0.15 = $14.25</li>
+                                <li><strong>Calculate total price:</strong> $95 + $14.25 = $109.25</li>
+                                <li><strong>The final price of the game is $109.25.</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Number -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                 <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg">Compound Interest and Rates</h4>
+                        <p class="mb-2">In Year 10, we build on proportional reasoning to solve more complex problems. A key topic is compound interest, where interest is added to the principal amount, so the interest itself starts earning interest. We also work with rates, like speed (kilometres per hour).</p>
+                        <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                            <p class="font-semibold">Example: Calculating Compound Interest (Yearly)</p>
+                            <p>You invest $1,000 in a savings account with a compound interest rate of 5% per year. How much money will you have after 2 years?</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong>Year 1 Interest:</strong> $1,000 * 0.05 = $50. New balance = $1,050.</li>
+                                <li><strong>Year 2 Interest:</strong> $1,050 * 0.05 = $52.50. New balance = $1,050 + $52.50 = $1,102.50.</li>
+                                <li><strong>After 2 years, you will have $1,102.50.</strong> (Note: This is more than the $1,100 you'd get with simple interest).</li>
+                            </ol>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            
+            <!-- Number Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Proportional Reasoning:</strong> Understanding and using relationships between quantities.</li>
+                        <li><strong>GST:</strong> Goods and Services Tax, a 15% tax on most items in NZ.</li>
+                        <li><strong>Profit:</strong> The money made after subtracting costs.</li>
+                        <li><strong>Loss:</strong> When costs are greater than income.</li>
+                        <li><strong>Simple/Compound Interest:</strong> Money earned on savings, calculated differently.</li>
+                        <li><strong>Rate:</strong> A measure of how one quantity changes in relation to another (e.g., km/h).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y9:</strong> A map has a scale of 1:100,000. If two towns are 5cm apart on the map, how many kilometres apart are they in real life?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>1. Real distance in cm: 5cm * 100,000 = 500,000 cm</p>
+                            <p>2. Convert to m (divide by 100): 500,000 / 100 = 5,000 m</p>
+                            <p>3. Convert to km (divide by 1000): 5,000 / 1000 = 5 km. The towns are 5 km apart.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y10:</strong> A car travels 180 km in 2 hours. What is its average speed in km/h?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>Speed = Distance / Time</p>
+                            <p>Speed = 180 km / 2 hours = 90 km/h.</p>
+                        </div>
+                    </div>
+                    <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-number-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Proportional Reasoning', 'ai-problem-container-number-y9', 'number')">
+                            ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-number-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-number-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Compound Interest and Rates', 'ai-problem-container-number-y10', 'number')">
+                            ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-number-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-number" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-number" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algebra Section -->
+        <section id="algebra-content" class="content-section">
+            <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Algebra</h2>
+                <p>Algebra is like a secret code for describing patterns and relationships. We use letters (variables) to represent unknown numbers, which lets us solve puzzles and create powerful formulas.</p>
+            </div>
+            
+            <!-- Year 9 Algebra -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg">Equations and Relationships</h4>
+                        <p class="mb-2">We learn how to work with formulas. This involves substituting values into a formula to find an answer, or rearranging a simple formula to find a different unknown.</p>
+                        <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                            <p class="font-semibold">Example: Using a Formula</p>
+                            <p>The formula for the area of a rectangle is <span class="font-mono">A = l * w</span> (Area = length times width). If a rectangle has a length (<span class="font-mono">l</span>) of 8cm and a width (<span class="font-mono">w</span>) of 5cm, what is its area?</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong>Write the formula:</strong> A = l * w</li>
+                                <li><strong>Substitute the values:</strong> A = 8 * 5</li>
+                                <li><strong>Calculate the answer:</strong> A = 40</li>
+                                <li><strong>The area is 40 cm².</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">Linear Relationships</h4>
+                        <p class="mb-2">We explore linear relationships, which are patterns that form a straight line when graphed. We learn to connect tables of values, graphs, and equations for these relationships and solve for unknowns.</p>
+                         <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                            <p class="font-semibold">Example: Solving a Linear Equation</p>
+                            <p>A plumber charges a $50 call-out fee and then $40 per hour. The equation for the total cost (<span class="font-mono">C</span>) is <span class="font-mono">C = 40h + 50</span>, where <span class="font-mono">h</span> is the number of hours. If the final bill is $170, how many hours did the plumber work?</p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li><strong>Set up the equation:</strong> 170 = 40h + 50</li>
+                                <li><strong>Subtract 50 from both sides:</strong> 120 = 40h</li>
+                                <li><strong>Divide by 40:</strong> h = 3</li>
+                                <li><strong>The plumber worked for 3 hours.</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Algebra -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                <div>
+                    <h4 class="font-semibold text-lg">Quadratic Relationships</h4>
+                    <p class="mb-2">We move on to quadratic relationships, which involve a variable squared (like <span class="font-mono">x²</span>). These patterns create curved graphs called parabolas. We learn how to connect their tables, graphs, and equations, and how to solve quadratic equations.</p>
+                     <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Solving a Quadratic Equation</p>
+                        <p>The path of a ball thrown in the air can be modelled by a quadratic equation. Let's solve a simple one: <span class="font-mono">x² - 9 = 0</span>. What are the possible values for <span class="font-mono">x</span>?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li><strong>Add 9 to both sides:</strong> x² = 9</li>
+                            <li><strong>Find the square root of both sides:</strong> x = √9</li>
+                            <li><strong>Remember both positive and negative roots:</strong> x = 3 or x = -3</li>
+                            <li><strong>The solutions are 3 and -3.</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Algebra Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                 <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Variable:</strong> A letter that represents an unknown value (e.g., x).</li>
+                        <li><strong>Formula:</strong> A rule written with mathematical symbols.</li>
+                        <li><strong>Rearrange:</strong> To change the subject of a formula.</li>
+                        <li><strong>Quadratic Equation:</strong> An equation involving a variable squared (x²).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y9:</strong> Use the formula <span class="font-mono">P = 2l + 2w</span> to find the perimeter of the rectangle from the example (l=8, w=5).</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>1. P = 2 * 8 + 2 * 5</p>
+                            <p>2. P = 16 + 10</p>
+                            <p>3. P = 26. The perimeter is 26 cm.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y10:</strong> Solve the equation <span class="font-mono">x² - 5 = 20</span>.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>1. Add 5 to both sides: x² = 25</p>
+                            <p>2. Square root both sides: x = 5 or x = -5</p>
+                        </div>
+                    </div>
+                     <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-algebra-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Linear Equations', 'ai-problem-container-algebra-y9', 'algebra')">
+                             ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-algebra-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-algebra-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Quadratic Equations', 'ai-problem-container-algebra-y10', 'algebra')">
+                             ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-algebra-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-algebra" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-algebra" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Measurement Section -->
+        <section id="measurement-content" class="content-section">
+            <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Measurement</h2>
+                <p>Measurement helps us quantify the world around us. We learn to calculate length, area, and volume for all sorts of shapes, from simple squares to complex 3D objects.</p>
+            </div>
+             <!-- Year 9 Measurement -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg">Perimeter and Area of Composite 2D Shapes</h4>
+                    <p class="mb-2">We learn to calculate measures for complex 2D shapes by breaking them down into simpler ones we already know (like rectangles, triangles, and circles).</p>
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Area of a Composite Shape</p>
+                        <p>Imagine an 'L' shape made from two rectangles. One is 10m by 3m, and the other is 4m by 3m. What is the total area?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li><strong>Calculate area of Rectangle 1:</strong> 10m * 3m = 30 m²</li>
+                            <li><strong>Calculate area of Rectangle 2:</strong> 4m * 3m = 12 m²</li>
+                            <li><strong>Add the areas together:</strong> 30 m² + 12 m² = 42 m²</li>
+                            <li><strong>The total area is 42 m².</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Measurement -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                <div>
+                    <h4 class="font-semibold text-lg">Surface Area and Volume of Composite 3D Shapes</h4>
+                    <p class="mb-2">Now we move into 3D! We learn to find the volume (space inside) and surface area (total area of all faces) of composite 3D shapes, including cylinders and spheres.</p>
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Volume of a Cylinder</p>
+                        <p>The formula for the volume of a cylinder is <span class="font-mono">V = πr²h</span>. Find the volume of a can with a radius (<span class="font-mono">r</span>) of 4cm and a height (<span class="font-mono">h</span>) of 10cm. (Use π ≈ 3.14)</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                             <li><strong>Write the formula:</strong> V = πr²h</li>
+                             <li><strong>Substitute the values:</strong> V = 3.14 * 4² * 10</li>
+                             <li><strong>Calculate the squared term:</strong> V = 3.14 * 16 * 10</li>
+                             <li><strong>Calculate the final answer:</strong> V = 502.4 cm³</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+             <!-- Measurement Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Perimeter:</strong> The distance around the outside of a 2D shape.</li>
+                        <li><strong>Area:</strong> The space inside a 2D shape.</li>
+                        <li><strong>Volume:</strong> The space a 3D object occupies.</li>
+                        <li><strong>Composite Shape:</strong> A shape made up of two or more simple shapes.</li>
+                        <li><strong>Surface Area:</strong> The total area of the surface of a 3D object.</li>
+                        <li><strong>Cylinder/Sphere:</strong> Common 3D shapes.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y9:</strong> The formula for the area of a circle is <span class="font-mono">A = πr²</span>. If a circle has a radius (<span class="font-mono">r</span>) of 5cm, what is its area? (Use π ≈ 3.14)</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>1. A = 3.14 * 5²</p>
+                            <p>2. A = 3.14 * 25</p>
+                            <p>3. A = 78.5. The area is 78.5 cm².</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y10:</strong> A rectangular prism (a box) has a length of 5m, width of 3m, and height of 2m. What is its volume?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>Volume = length * width * height</p>
+                            <p>V = 5 * 3 * 2 = 30 m³</p>
+                        </div>
+                    </div>
+                    <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-measurement-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Area of Composite 2D Shapes', 'ai-problem-container-measurement-y9', 'measurement')">
+                             ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-measurement-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-measurement-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Volume of 3D Shapes', 'ai-problem-container-measurement-y10', 'measurement')">
+                             ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-measurement-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-measurement" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-measurement" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Geometry Section -->
+        <section id="geometry-content" class="content-section">
+             <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Geometry</h2>
+                <p>Geometry is the study of shapes, sizes, positions of figures, and the properties of space. It's all about logical thinking and proving why things are the way they are.</p>
+            </div>
+            
+             <!-- Year 9 Geometry -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                <div>
+                    <h4 class="font-semibold text-lg">Angle Properties</h4>
+                    <p class="mb-2">We learn the fundamental rules about angles that are always true. These rules help us find unknown angles in diagrams without needing a protractor. This includes angles at a point, on a straight line, vertically opposite angles, and angles formed by parallel lines.</p>
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Angles on Parallel Lines</p>
+                        <p>If two parallel lines are crossed by another line (a transversal), the corresponding angles are equal. If one angle is 120°, what is its corresponding angle?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li><strong>Know the rule:</strong> Corresponding angles on parallel lines are equal.</li>
+                            <li><strong>Apply the rule:</strong> The corresponding angle is also 120°.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Geometry -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg">Properties of Polygons and Congruence</h4>
+                    <p class="mb-2">We investigate the properties of polygons (shapes with straight sides), like how to find the sum of their interior angles. We also learn about triangle congruence, which is a way to prove that two triangles are exactly the same size and shape.</p>
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Interior Angles of a Pentagon</p>
+                        <p>The formula for the sum of interior angles in a polygon is <span class="font-mono">(n - 2) * 180°</span>, where <span class="font-mono">n</span> is the number of sides. What is the sum of angles in a pentagon (5 sides)?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                             <li><strong>Identify the number of sides:</strong> n = 5.</li>
+                             <li><strong>Substitute into the formula:</strong> (5 - 2) * 180°</li>
+                             <li><strong>Calculate the sum:</strong> 3 * 180° = 540°</li>
+                             <li><strong>The interior angles of a pentagon add up to 540°.</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Geometry Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Angles at a point:</strong> Angles around a single point add up to 360°.</li>
+                        <li><strong>Angles on a straight line:</strong> Add up to 180°.</li>
+                        <li><strong>Vertically opposite angles:</strong> Angles opposite each other when two lines cross. They are equal.</li>
+                        <li><strong>Parallel Lines Angles:</strong> Corresponding, alternate, and co-interior angles.</li>
+                        <li><strong>Polygon:</strong> A 2D shape with straight sides.</li>
+                        <li><strong>Congruence:</strong> When two shapes are identical in size and shape.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y9:</strong> Two lines cross. One angle is 45°. What is the vertically opposite angle?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                             <p>Vertically opposite angles are equal.</p>
+                             <p>So the other angle is also 45°.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y10:</strong> What is the sum of the interior angles of a hexagon (6 sides)?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                             <p>(6 - 2) * 180° = 4 * 180° = 720°</p>
+                        </div>
+                    </div>
+                     <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-geometry-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Angle Properties with Parallel Lines', 'ai-problem-container-geometry-y9', 'geometry')">
+                             ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-geometry-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-geometry-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Polygon Interior Angles', 'ai-problem-container-geometry-y10', 'geometry')">
+                             ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-geometry-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-geometry" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-geometry" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="statistics-content" class="content-section">
+             <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Statistics</h2>
+                <p>Statistics is about collecting, analysing, and interpreting data to understand the world. We learn how to ask good questions and use data to tell a meaningful story.</p>
+            </div>
+             <!-- Year 9 Statistics -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg">Statistical Investigations with Category Data</h4>
+                    <p class="mb-2">We learn to carry out a full statistical investigation using the enquiry cycle. In Year 9, we focus on questions involving category data (like favourite colour) and whole number data (like number of pets).</p>
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Posing a Question</p>
+                        <p>You want to investigate how students get to school. A good comparison question would be:</p>
+                        <p class="mt-2 font-medium">"For students at our school, do Year 9 students tend to use a different method of transport to get to school than Year 12 students?"</p>
+                        <p class="mt-2">This is better than "How do kids get to school?" because it is specific and compares two groups.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Statistics -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                <div>
+                    <h4 class="font-semibold text-lg">The Statistical Enquiry Cycle</h4>
+                    <p class="mb-2">This is a process for carrying out a statistical investigation. It involves posing a question, collecting data, analysing it, and drawing a conclusion.</p>
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Posing a Question</p>
+                        <p>Instead of a vague question like "What about screen time?", we pose a specific <span class="font-semibold">summary</span> or <span class="font-semibold">comparison</span> question that we can answer with data.</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>Summary Question:</strong> "What is the typical amount of daily screen time for a Year 10 student at our school?"</li>
+                            <li><strong>Comparison Question:</strong> "Do Year 10 boys at our school tend to have more daily screen time than Year 10 girls?"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!-- Statistics Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                 <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Statistical Enquiry Cycle:</strong> Problem, Plan, Data, Analysis, Conclusion (PPDAC).</li>
+                        <li><strong>Summary Question:</strong> A question about a typical value or spread in one group.</li>
+                        <li><strong>Comparison Question:</strong> A question that compares a feature between two or more groups.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <p><strong>Y10:</strong> Turn this idea into a good comparison question: "Do people who do homework get better marks?".</p>
+                    <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                    <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                        <p>A possible question:</p>
+                        <p>"For Year 10 students at our school, do those who spend more than 3 hours on maths homework per week tend to get higher scores on the end-of-term test than those who spend less than 3 hours?"</p>
+                    </div>
+                     <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-statistics-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Posing Statistical Questions for Category Data', 'ai-problem-container-statistics-y9', 'statistics')">
+                             ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-statistics-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-statistics-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Posing Statistical Summary and Comparison Questions', 'ai-problem-container-statistics-y10', 'statistics')">
+                             ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-statistics-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-statistics" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-statistics" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Probability Section -->
+        <section id="probability-content" class="content-section">
+             <div class="card">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-2">Probability</h2>
+                <p>Probability is the maths of chance. It helps us figure out how likely something is to happen, from flipping a coin to predicting the weather.</p>
+            </div>
+            
+             <!-- Year 9 Probability -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-green-700">Year 9 Learning</h3>
+                <div>
+                    <h4 class="font-semibold text-lg">Predicting and Comparing Outcomes</h4>
+                    <p class="mb-2">We use probabilities (fractions, decimals, percentages) to predict what might happen over a series of events (theoretical probability). We then compare these predictions to what actually happens when we run an experiment (experimental probability).</p>
+                    <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Rolling a Die</p>
+                        <p>The theoretical probability of rolling a 6 on a standard die is 1/6 (approx 16.7%). If you roll the die 60 times, how many 6s would you expect? How might your experiment differ?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li><strong>Theoretical Prediction:</strong> (1/6) * 60 = 10. You would expect to roll ten 6s.</li>
+                            <li><strong>Experimental Outcome:</strong> You roll the die 60 times and only get seven 6s. This is your experimental result.</li>
+                            <li><strong>Comparison:</strong> Your experimental result (7) was slightly lower than your theoretical prediction (10). Due to randomness, they are rarely exactly the same.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 10 Probability -->
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4 text-blue-700">Year 10 Learning</h3>
+                 <div>
+                    <h4 class="font-semibold text-lg">Representing Events</h4>
+                    <p class="mb-2">We learn more advanced ways to represent and solve probability problems for multiple events, using tools like probability trees and tables.</p>
+                    <div class="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                        <p class="font-semibold">Example: Using a Probability Tree</p>
+                        <p>You flip a coin twice. What is the probability of getting two heads (HH)?</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li><strong>First Flip:</strong> The probability of Heads (H) is 0.5 and Tails (T) is 0.5. Draw two branches.</li>
+                            <li><strong>Second Flip:</strong> From each of the first branches, draw two more branches for H (0.5) and T (0.5).</li>
+                            <li><strong>Find the HH path:</strong> Follow the "Heads" branch and then the next "Heads" branch.</li>
+                            <li><strong>Multiply the probabilities along the path:</strong> 0.5 * 0.5 = 0.25.</li>
+                            <li><strong>The probability of getting two heads is 0.25 or 25%.</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Probability Vocabulary & Practice -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Key Vocabulary</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Outcome:</strong> A possible result of an experiment.</li>
+                        <li><strong>Event:</strong> A specific outcome or set of outcomes.</li>
+                        <li><strong>Probability:</strong> A measure of how likely an event is to occur (from 0 to 1).</li>
+                        <li><strong>Trial:</strong> A single performance of an experiment (e.g., one coin flip).</li>
+                        <li><strong>Theoretical vs Experimental Probability:</strong> What should happen vs what does happen.</li>
+                        <li><strong>Probability Tree:</strong> A diagram used to represent outcomes of multiple events.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2">Let's Do It! Practice</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y9:</strong> The probability of a bus being late is 0.2 (20%). Over 10 school days, how many times would you expect the bus to be late?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>0.2 * 10 = 2</p>
+                            <p>You would expect the bus to be late 2 times.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Y10:</strong> You roll a standard six-sided die and flip a coin. What is the probability of rolling a number less than 3 AND getting a tails?</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                        <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                            <p>P(number < 3) = 2/6 = 1/3</p>
+                            <p>P(Tails) = 1/2</p>
+                            <p>P(Both) = (1/3) * (1/2) = 1/6</p>
+                        </div>
+                    </div>
+                     <!-- AI Problem Generator -->
+                    <div class="mt-6 pt-4 border-t">
+                        <h4 class="font-semibold text-indigo-600 mb-2">Need more practice?</h4>
+                        <button id="btn-probability-y9" class="btn btn-primary w-full flex items-center justify-center" onclick="generateProblem('Year 9 Experimental vs Theoretical Probability', 'ai-problem-container-probability-y9', 'probability')">
+                             ✨ Generate a New Y9 Problem
+                        </button>
+                        <div id="ai-problem-container-probability-y9" class="mt-4 hidden"></div>
+
+                        <button id="btn-probability-y10" class="btn btn-primary w-full flex items-center justify-center mt-2" onclick="generateProblem('Year 10 Probability Trees for multiple events', 'ai-problem-container-probability-y10', 'probability')">
+                             ✨ Generate a New Y10 Problem
+                        </button>
+                        <div id="ai-problem-container-probability-y10" class="mt-4 hidden"></div>
+                        
+                        <div id="loading-spinner-probability" class="text-center mt-4 hidden">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto"></div>
+                            <p>Generating a new problem...</p>
+                        </div>
+                        <div id="error-message-probability" class="text-center mt-4 text-red-600 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- Navigation Logic ---
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function showSection(sectionId, clickedLink) {
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target section
+            const targetSection = document.getElementById(sectionId + '-content');
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Update active state on nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            if(clickedLink) {
+                clickedLink.classList.add('active');
+            }
+
+            // Scroll to top of content
+            window.scrollTo(0, 0);
+        }
+
+        // --- Solution Toggling Logic ---
+        function toggleSolution(button) {
+            const solutionDiv = button.nextElementSibling;
+            if (solutionDiv.style.display === 'block') {
+                solutionDiv.style.display = 'none';
+                button.textContent = 'Show Solution';
+            } else {
+                solutionDiv.style.display = 'block';
+                button.textContent = 'Hide Solution';
+            }
+        }
+
+        // --- Gemini API Logic ---
+        const apiKey = ""; // This is handled by the execution environment.
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        async function generateProblem(topic, containerId, sectionName) {
+            const container = document.getElementById(containerId);
+            const loadingSpinner = document.getElementById(`loading-spinner-${sectionName}`);
+            const errorMessage = document.getElementById(`error-message-${sectionName}`);
+            const allGenButtons = document.querySelectorAll(`#${sectionName}-content .btn-primary`);
+
+            // Reset UI and disable buttons
+            container.innerHTML = '';
+            container.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            allGenButtons.forEach(btn => btn.disabled = true);
+
+
+            const systemPrompt = `You are a helpful maths tutor for high school students (Years 9-10) in New Zealand.
+            Your task is to generate a new, unique, and engaging word problem based on a given topic.
+            The problem MUST be relevant to a student in New Zealand (use NZ contexts, cities, dollars, etc.).
+            You MUST provide your response in a valid JSON format ONLY. The JSON object must have two string keys: "problem" and "solution".
+            The "problem" value should be the word problem text.
+            The "solution" value should be a clear, step-by-step explanation of how to solve the problem, ending with the final answer clearly stated.`;
+
+            const userQuery = `Generate a word problem for the topic: "${topic}".`;
+            
+            // Basic exponential backoff implementation
+            let response;
+            let retries = 3;
+            let delay = 1000;
+
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const payload = {
+                        contents: [{ parts: [{ text: userQuery }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                        generationConfig: { responseMimeType: "application/json", temperature: 0.9 }
+                    };
+
+                    response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        break; // Success
+                    }
+                    if (response.status === 429 || response.status >= 500) {
+                       // Throttled or server error, wait and retry
+                       await new Promise(resolve => setTimeout(resolve, delay));
+                       delay *= 2; 
+                    } else {
+                        // Other client-side error, don't retry
+                        throw new Error(`API request failed with status ${response.status}`);
+                    }
+                } catch (error) {
+                     if (i === retries - 1) throw error; // Rethrow last error
+                     await new Promise(resolve => setTimeout(resolve, delay));
+                     delay *= 2;
+                }
+            }
+
+
+            try {
+                if (!response || !response.ok) {
+                    throw new Error(`API request failed after retries.`);
+                }
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const jsonText = candidate.content.parts[0].text;
+                    const data = JSON.parse(jsonText);
+
+                    if (data.problem && data.solution) {
+                        // Basic sanitization
+                        const problemText = data.problem.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                        const solutionText = data.solution.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+
+                        container.innerHTML = `
+                            <p class="mb-2 font-semibold">New Problem:</p>
+                            <p class="mb-2">${problemText}</p>
+                            <button class="btn btn-primary btn-sm" onclick="toggleSolution(this)">Show Solution</button>
+                            <div class="solution mt-2 p-3 bg-gray-100 rounded-lg">
+                                ${solutionText}
+                            </div>
+                        `;
+                        container.classList.remove('hidden');
+                    } else {
+                        throw new Error("Invalid JSON structure in AI response.");
+                    }
+                } else {
+                     throw new Error("Unexpected API response structure.");
+                }
+            } catch (error) {
+                console.error("Error generating problem:", error);
+                errorMessage.textContent = 'Sorry, an error occurred while generating the problem. Please try again.';
+                errorMessage.classList.remove('hidden');
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                allGenButtons.forEach(btn => btn.disabled = false);
+            }
+        }
+    </script>
+</body>
+</html>
+
